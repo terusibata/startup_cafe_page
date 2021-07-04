@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="ja">
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>混雑度チェッカー</title><!--titleはタブの名前(Webページのタイトル)-->
+    <link rel="stylesheet" href="static/css/style.css" media="screen">
+    <script src="../static/js/jquery-3.6.0.min.js"></script>
+
+    <link href="//cdn.bootcss.com/noUiSlider/8.5.1/nouislider.min.css" rel="stylesheet">
+    <script src="//cdn.bootcss.com/noUiSlider/8.5.1/nouislider.js"></script>
+    <link rel="stylesheet" href="../static/css/jquery.range.css">
+    <script src="../static/js/script.js"></script>
+    <script src="../static/js/chart.min.js"></script>
+    <script src="../static/js/chartjs-plugin-streaming.min.js"></script>
+    <script src="../static/js/desvg.min.js"></script>
+    <script src="../static/js/holiday.js"></script>
+    <script src="../static/js/jquery.range.js"></script>
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+</head>
+<body>
+    <!-- <div id="title">
+        <h1>混雑度チェッカー</h1>
+    </div> -->
+    <div class="container-wrapper">
+        <div class="card-body" id="J_content1">
+            <div class="title">
+                <p><span id="j">J</span> 号館１階食堂</p>
+            </div>
+            <div class="card-content">
+                <div>
+                    <img id="J-icon" src="../static/images/icon1.png">
+                </div>
+                <div>
+                    <p id="J_time">現在</p>
+                    <p class="time-people">
+                        <a id="J-Number-of-people">30</a>
+                        <a>人</a>
+                    </p>
+                </div>
+            </div>
+            <p id="J-information">空いています</p>
+            <div class="line-content">
+                <p id="J-now">現 在</p>
+                <p id="J-1">1分後</p>
+                <p id="J-5">5分後</p>
+            </div>
+            <!-- <div id="range"></div> -->
+            <!-- <input type="hidden" class="slider-input" value="23" /> -->
+            <!-- <div class="slider"> -->
+                <!-- <input class ="range" type="range"list="my-datalist" min="1"max="6">
+            <datalist id="my-datalist">
+                <option value="1">
+                <option value="2">
+                <option value="3">
+                <option value="4">
+                <option value="5">
+                <option value="6">
+            </datalist> -->
+        <!-- </div> -->
+    </div>
+        <!--Z号館側-->
+    <div class="card-body" id="Z_content1">
+        <div class="title">
+            <p><span id="z">Z</span> 号館１階食堂</p>
+        </div>
+        <div class="card-content">
+            <div>
+                <img id="Z-icon" src="../static/images/icon2.png">
+            </div>
+            <div>
+                <p id="Z_time">現在</p>
+                <p class="time-people">
+                    <a id="Z-Number-of-people">60</a>
+                    <a>人</a>
+                </p>
+            </div>
+        </div>
+        <p id="Z-information">現在、やや混雑しています</p>
+            <div class="line-content">
+                <p id="Z-now">現 在</p>
+                <p id="Z-1">1分後</p>
+                <p id="Z-5">5分後</p>
+        </div>
+            <!-- <input class ="range" type="range"list="my-datalist" min="1"max="6">
+            <datalist id="my-datalist">
+                <option value="1">
+                <option value="2">
+                <option value="3">
+                <option value="4">
+                <option value="5">
+                <option value="6">
+            </datalist> -->
+    </div>
+    <section id="content1"></section>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+</body>
+
+<script>  
+var count=0;
+    setInterval(function () {
+        count=change_screen_pc(count);
+  
+    }, 5000);
+    setTimeout(function () {
+        count=change_screen_pc(count);
+    }, 0);
+</script>
+
+<!-- ここまで -->
+
+</html>

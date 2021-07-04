@@ -1,0 +1,7 @@
+Flask
+uwsgi
+sqlalchemy
+flask-httpauth
+Flask-Devices
+beautifulsoup4
+urllib3
